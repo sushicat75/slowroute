@@ -43,7 +43,7 @@ jobs:
         run: pnpm install --no-frozen-lockfile
 
       - name: Build Project
-        run: pnpm build --base=slowroute
+        run: pnpm build --base=slowrouteux
 
       - name: Add NoJekyll Bypass
         run: echo "" > ./dist/.nojekyll
