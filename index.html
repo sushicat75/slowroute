@@ -9,52 +9,57 @@
   </head>
   <body>
     <header><h1>slowroute ux</h1>
-    <h2>a routing service for the Minecart Rapid Transit server, with better UI.</h2></header>
+    <h3>a routing service for the Minecart Rapid Transit server, with better UI.</h3></header>
    <main>
+       <fieldset>
+       <div class="dropdown-container">
     <label for="from">From</label>
     <select id="from"></select>
     <button id="from-random">Random</button>
+    </div>
+    </fieldset>
     <br />
 
+<fieldset>
+<div class="dropdown-container">
     <label for="to">To</label>
     <select id="to"></select>
     <button id="to-random">Random</button>
+    <div class="dropdown-container">
+        </fieldset>
     <br />
 
-     <h3>transit mode selection</h3>
-    <label for="route-by-air">Air</label>
-    <input type="checkbox" id="route-by-air" /> |
-    <label for="route-by-bus">Bus</label>
-    <input type="checkbox" id="route-by-bus" /> |
-    <label for="route-by-rail">Rail</label>
-    <input type="checkbox" id="route-by-rail" /> |
-    <label for="route-by-sea">Sea</label>
-    <input type="checkbox" id="route-by-sea" /> |
-    <label for="route-by-spawn-warp">Spawn Warp</label>
-    <input type="checkbox" id="route-by-spawn-warp" /> |
-    <label for="route-by-traincarts">TrainCarts</label>
-    <input type="checkbox" id="route-by-traincarts" /> |
-    <label for="route-by-warp">Warp</label>
-    <input type="checkbox" id="route-by-warp" /> |
-    <label for="route-by-vehicles">Vehicles</label>
-    <input type="checkbox" id="route-by-vehicles" /> |
-    <label for="route-by-cart">Cart</label>
-    <input type="checkbox" id="route-by-cart" />
+    <fieldset class="option-group">
+      <legend>Route by</legend>
+      <div class="option-list">
+        <label class="option-item" for="route-by-air"><input type="checkbox" id="route-by-air" /> Air</label>
+        <label class="option-item" for="route-by-bus"><input type="checkbox" id="route-by-bus" /> Bus</label>
+        <label class="option-item" for="route-by-rail"><input type="checkbox" id="route-by-rail" /> Rail</label>
+        <label class="option-item" for="route-by-sea"><input type="checkbox" id="route-by-sea" /> Sea</label>
+        <label class="option-item" for="route-by-spawn-warp"><input type="checkbox" id="route-by-spawn-warp" /> Spawn Warp</label>
+        <label class="option-item" for="route-by-traincarts"><input type="checkbox" id="route-by-traincarts" /> TrainCarts</label>
+        <label class="option-item" for="route-by-warp"><input type="checkbox" id="route-by-warp" /> Warp</label>
+        <label class="option-item" for="route-by-vehicles"><input type="checkbox" id="route-by-vehicles" /> Vehicles</label>
+        <label class="option-item" for="route-by-cart"><input type="checkbox" id="route-by-cart" /> Cart</label>
+      </div>
+    </fieldset>
+
+    <fieldset class="option-group">
+      <legend>Speed</legend>
+      <div class="option-list">
+        <label class="option-item" for="prox-walk"><input type="radio" id="prox-walk" name="prox" /> Walking/Running</label>
+        <label class="option-item" for="prox-walk10"><input type="radio" id="prox-walk10" name="prox" /> Walking/Running (speed 10)</label>
+        <label class="option-item" for="prox-fly"><input type="radio" id="prox-fly" name="prox" /> Flying</label>
+        <label class="option-item" for="prox-fly10"><input type="radio" id="prox-fly10" name="prox" /> Flying (speed 10)</label>
+      </div>
+    </fieldset>
     <br />
 
-     <h3>additional speed calculation</h3>
-    <label for="prox-walk">Walking/Running</label>
-    <input type="radio" id="prox-walk" name="prox" /> |
-    <label for="prox-walk10">Walking/Running (speed 10)</label>
-    <input type="radio" id="prox-walk10" name="prox" /> |
-    <label for="prox-fly">Flying</label>
-    <input type="radio" id="prox-fly" name="prox" /> |
-    <label for="prox-fly10">Flying (speed 10)</label>
-    <input type="radio" id="prox-fly10" name="prox" />
-    <br />
-
-    <button id="go">Go</button>
+    <p style="text-align:center;"><button id="go">Go</button></p>
 
     <div id="out"></div>
+
+    <footer><p style="text-align:center;"><a href="https://github.com/sushicat75/slowrouteux">Repo</a></p>
+    </footer>
   </body>
 </html>
